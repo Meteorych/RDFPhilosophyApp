@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RDFPhilosophyApp", "RDFPhilosophyApp.csproj", "{10FA032B-D929-48EC-8705-7DC0AFA12174}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10FA032B-D929-48EC-8705-7DC0AFA12174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10FA032B-D929-48EC-8705-7DC0AFA12174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10FA032B-D929-48EC-8705-7DC0AFA12174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10FA032B-D929-48EC-8705-7DC0AFA12174}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73CFA9E8-0DE2-4873-A2E0-019C357EB3CC}
+	EndGlobalSection
+EndGlobal
