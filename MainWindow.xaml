@@ -6,7 +6,23 @@
         xmlns:local="clr-namespace:RDFPhilosophyApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+    <Grid Height="*">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*" MinHeight="19.96"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Grid.Row="0"></DataGrid>
+        <!--To do drop-down menu Row-->
+        <Button Grid.Row="2" Grid.Column ="0" Name="InsertNewPhilosopherButton" FontSize="18">
+            <TextBlock TextWrapping="Wrap" Text="Insert new Philosopher"/>
+        </Button>
+        <Button Grid.Row ="2" Grid.Column="1" FontSize="18">
+            <TextBlock TextWrapping="Wrap" Text="Change philosopher's Year of Birth" FontSize="18"/>
+        </Button>
     </Grid>
 </Window>
