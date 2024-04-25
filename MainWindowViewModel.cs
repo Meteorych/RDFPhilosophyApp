@@ -1,13 +1,11 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using IronPython.Hosting;
-using Microsoft.Scripting.Hosting;
 
 namespace RDFPhilosophyApp
 {
     public class MainWindowViewModel : INotifyPropertyChanged
     {
-        private readonly ScriptEngine _queriesEngine = Python.CreateEngine();
+        
 
         public MainWindowViewModel()
         {
