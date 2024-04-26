@@ -1,16 +1,13 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2024/3/philosophy/"
-     xml:base="http://www.semanticweb.org/user/ontologies/2024/3/philosophy/"
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2024/3/philosophyMain/"
+     xml:base="http://www.semanticweb.org/user/ontologies/2024/3/philosophyMain/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:philosophy="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy">
-        <owl:imports rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2"/>
-        <owl:imports rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-3"/>
-    </owl:Ontology>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophyMain"/>
     
 
 

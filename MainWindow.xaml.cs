@@ -10,8 +10,9 @@ namespace RDFPhilosophyApp
         private readonly MainWindowViewModel _viewModel;
         public MainWindow()
         {
+            _viewModel = new MainWindowViewModel("bolt://localhost:7687");
+            DataContext = _viewModel;
             InitializeComponent();
-            _viewModel = new MainWindowViewModel();
         }
     }
 }
