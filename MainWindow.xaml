@@ -3,35 +3,78 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:RDFPhilosophyApp" d:DataContext="{d:DesignInstance Type=local:MainWindowViewModel}"
+        xmlns:local="clr-namespace:RDFPhilosophyApp" 
+        d:DataContext="{d:DesignInstance Type=local:MainWindowViewModel}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="1000" ResizeMode="NoResize">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*" MinHeight="19.96"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <ListView Grid.Row="0" ItemsSource ="{Binding TriplesList}" Grid.ColumnSpan="2" Grid.RowSpan="2">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Width="Auto" Header="Subject" DisplayMemberBinding="{Binding Subject}"/>
-                    <GridViewColumn Width="Auto" Header="Predicate" DisplayMemberBinding="{Binding Predicate}"/>
-                    <GridViewColumn Width="Auto" Header="Object" DisplayMemberBinding="{Binding Object}"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <!--To do drop-down menu Row-->
-        <Button Grid.Row="3" Grid.Column ="0" Name="InsertNewPhilosopherButton" FontSize="18">
-            <TextBlock TextWrapping="Wrap" Text="Insert new Philosopher"/>
-        </Button>
-        <Button Grid.Row ="3" Grid.Column="1" FontSize="18">
-            <TextBlock TextWrapping="Wrap" Text="Change philosopher's Year of Birth" FontSize="18"/>
-        </Button>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <ListView Name="DataView" Grid.Row="0" ItemsSource ="{Binding TriplesList}" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Subject}"/>
+                        <GridViewColumn Header="Predicate" DisplayMemberBinding="{Binding Predicate}"/>
+                        <GridViewColumn Header="Object" DisplayMemberBinding="{Binding Object}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button Grid.Row="2" Grid.Column ="0" Name="GetPhilosophersByBranch" FontSize="18">
+                <TextBlock TextWrapping="Wrap" Text="Get philosophers by branch"/>
+            </Button>
+            <Button Grid.Row="2" Grid.Column ="1" Name="GetMethodsByBranch" FontSize="18">
+                <TextBlock TextWrapping="Wrap" Text="Get method by branch"/>
+            </Button>
+            <Button Grid.Row="3" Grid.Column ="0" Name="InsertNewPhilosopherButton" FontSize="18">
+                <TextBlock TextWrapping="Wrap" Text="Insert new Philosopher"/>
+            </Button>
+            <Button Grid.Row ="3" Grid.Column="1" FontSize="18">
+                <TextBlock TextWrapping="Wrap" Text="Change philosopher's Year of Birth" FontSize="18"/>
+            </Button>
+            <Button Grid.Row ="4" Grid.Column ="0" Name ="ShowDataButton"  FontSize="18" Click="ShowDataButton_Click">
+                <TextBlock>Show all data from ontology</TextBlock>
+            </Button>
+            <Button Grid.Row ="4" Grid.Column ="1" Name ="ShowPhilosophersButton" FontSize="18" Click="ShowPhilosophersButton_Click">
+                <TextBlock>Show philosophers from ontology</TextBlock>
+            </Button>
+        </Grid>
+        <StackPanel Visibility="Collapsed">
+            <Grid Name="InputBoxGetPhilosopherByBranch" Visibility="Collapsed">
+                <Grid Background="Black" Opacity="0.5"/>
+                <Border
+                MinWidth="250"
+                Background="Orange" 
+                BorderBrush="Black" 
+                BorderThickness="1" 
+                CornerRadius="0,55,0,55" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center">
+                    <StackPanel>
+                        <TextBlock Margin="5" Text="Input Box:" FontWeight="Bold" FontFamily="Cambria" />
+                        <TextBox MinWidth="150" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="InputTextBox"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <!--<Button x:Name="YesButton" Margin="5" Content="Yes" Background="{x:Null}" Click="YesButton_Click"/>
+                            <Button x:Name="NoButton" Margin="5" Content="No" Background="{x:Null}" Click="NoButton_Click" />-->
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </Grid>
+            <Grid Name="InputBoxGetMethodsByBranch" Visibility="Collapsed">
+                
+            </Grid>
+            <Grid Name="InputBoxPhilosopherData" Visibility="Collapsed"/>
+            <Grid Name ="InputBoxChangePhilosophersYearOfBirth" Visibility="Collapsed"/>
+        </StackPanel>
+        
     </Grid>
 </Window>

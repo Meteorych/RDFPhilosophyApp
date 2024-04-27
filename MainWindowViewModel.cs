@@ -13,10 +13,10 @@ namespace RDFPhilosophyApp
         public MainWindowViewModel(string uri)
         {
             _driver = GraphDatabase.Driver(uri, AuthTokens.Basic("neo4j", "vanyavanya"));
-            TriplesList = GetData();
+            GetData();
         }
 
-        public List<Triple> GetData()
+        public void GetData()
         {
             using var session = _driver.Session();
             var data = session.ExecuteRead(
@@ -30,15 +30,40 @@ namespace RDFPhilosophyApp
                     {
                         triples.Add(new Triple
                         {
-                            Subject = record["subject"].As<string>(),
-                            Predicate = record["predicate"].As<string>(),
-                            Object = record["object"].As<string>()
+                            Subject = record["subject"].As<string>().Split("#").Last(),
+                            Predicate = record["predicate"].As<string>()[(record["predicate"].As<string>().IndexOf("_")+2)..],
+                            Object = record["object"].As<string>().Split("#").Last()
                         });
                     }
                     return triples;
                 });
-            return data;
+            TriplesList = data;
         }
+
+        public void GetPhilosophersOnlyData()
+        {
+            using var session = _driver.Session();
+            var data = session.ExecuteRead(
+                tx =>
+                {
+                    var result = tx.Run(
+                        "MATCH (s:ns0__Philosopher)" +
+                        "RETURN s.uri AS subject");
+                    var triples = new List<Triple>();
+                    foreach (var record in result)
+                    {
+                        triples.Add(new Triple
+                        {
+                            Subject = record["subject"].As<string>().Split("#").Last(),
+                            Predicate = "null",
+                            Object = "null"
+                        });
+                    }
+                    return triples;
+                });
+            TriplesList = data;
+        }
+
         public void Dispose()
         {
             _driver.Dispose();
