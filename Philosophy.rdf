@@ -1,13 +1,16 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2024/3/philosophyMain/"
-     xml:base="http://www.semanticweb.org/user/ontologies/2024/3/philosophyMain/"
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2024/3/philosophy/"
+     xml:base="http://www.semanticweb.org/user/ontologies/2024/3/philosophy/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:philosophy="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophyMain"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy">
+        <owl:imports rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-3"/>
+    </owl:Ontology>
     
 
 
@@ -216,7 +219,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Absurdism">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Metaphysics"/>
         <philosophy:Main_method rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Analysis"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Albert_Camus"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Albert_Camus"/>
         <philosophy:Date_of_appearance>20th century</philosophy:Date_of_appearance>
     </owl:NamedIndividual>
     
@@ -227,17 +230,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Action">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Ontology"/>
         <philosophy:Main_method rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Intuition"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Immanuel_Kant"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Albert_Camus -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Albert_Camus">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
-        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#France"/>
-        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Contemprorary"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Immanuel_Kant"/>
     </owl:NamedIndividual>
     
 
@@ -259,53 +252,13 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Aristotle -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Aristotle">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
-        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Greece"/>
-        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Ancient"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Arthur_Schopenhauer -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Arthur_Schopenhauer">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
-        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Germany"/>
-        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Modern"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Atomism -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Atomism">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Metaphysics"/>
         <philosophy:Main_method rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Evidence"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Democritus"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Democritus"/>
         <philosophy:Date_of_appearance>5th century BC</philosophy:Date_of_appearance>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Baruch_Spinoza -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Baruch_Spinoza">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
-        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Netherlands"/>
-        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Modern"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Bertrand_Russell -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Bertrand_Russell">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
-        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#The_UK"/>
-        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Contemprorary"/>
     </owl:NamedIndividual>
     
 
@@ -323,7 +276,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Compatibilism">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Free_will"/>
         <philosophy:Main_method rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Phenomenology"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Thomas_Aquinas"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Thomas_Aquinas"/>
         <philosophy:Date_of_appearance>4th century BC</philosophy:Date_of_appearance>
     </owl:NamedIndividual>
     
@@ -333,7 +286,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Consequentialism">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Ethics"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Jeremy_Bentham"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Jeremy_Bentham"/>
         <philosophy:Date_of_appearance>Ancient times</philosophy:Date_of_appearance>
     </owl:NamedIndividual>
     
@@ -344,26 +297,6 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Contemprorary">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Era"/>
         <philosophy:Century_of_beginning rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</philosophy:Century_of_beginning>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#David_Hume -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#David_Hume">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
-        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#The_UK"/>
-        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Modern"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Democritus -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Democritus">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
-        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Greece"/>
-        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Ancient"/>
     </owl:NamedIndividual>
     
 
@@ -380,7 +313,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Deontology">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Ethics"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Immanuel_Kant"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Immanuel_Kant"/>
         <philosophy:Date_of_appearance>18th century</philosophy:Date_of_appearance>
     </owl:NamedIndividual>
     
@@ -391,8 +324,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Determinism">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Free_will"/>
         <philosophy:Main_method rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Common_sense"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Aristotle"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Friedrich_Nietzsche"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Aristotle"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Friedrich_Nietzsche"/>
         <philosophy:Date_of_appearance>7th century BC</philosophy:Date_of_appearance>
     </owl:NamedIndividual>
     
@@ -403,7 +336,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Dualism">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Metaphysics"/>
         <philosophy:Main_method rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Intuition"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Rene_Descartes"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Rene_Descartes"/>
         <philosophy:Date_of_appearance>17th century</philosophy:Date_of_appearance>
     </owl:NamedIndividual>
     
@@ -414,8 +347,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Empiricism">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Epistemology"/>
         <philosophy:Main_method rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Evidence"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#David_Hume"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#John_Locke"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#David_Hume"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#John_Locke"/>
         <philosophy:Date_of_appearance>300 year BC</philosophy:Date_of_appearance>
     </owl:NamedIndividual>
     
@@ -434,9 +367,9 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Existentialism">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Metaphysics"/>
         <philosophy:Main_method rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Common_sense"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Friedrich_Nietzsche"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Jean_Paul_Satre"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Soren_Kierkegaard"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Friedrich_Nietzsche"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Jean_Paul_Satre"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Soren_Kierkegaard"/>
         <philosophy:Date_of_appearance>19th century</philosophy:Date_of_appearance>
     </owl:NamedIndividual>
     
@@ -447,7 +380,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Formalism">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Aesthetics"/>
         <philosophy:Main_method rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Evidence"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Immanuel_Kant"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Immanuel_Kant"/>
         <philosophy:Date_of_appearance>18th century</philosophy:Date_of_appearance>
     </owl:NamedIndividual>
     
@@ -457,26 +390,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#France">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Country"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Friedrich_Nietzsche -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Friedrich_Nietzsche">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
-        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Germany"/>
-        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Modern"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Georg_Wilhelm_Friedrich_Hegel -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Georg_Wilhelm_Friedrich_Hegel">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
-        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Germany"/>
-        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Modern"/>
     </owl:NamedIndividual>
     
 
@@ -497,34 +410,14 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Heraclitus -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Heraclitus">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
-        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Greece"/>
-        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Ancient"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Idealism -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Idealism">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Metaphysics"/>
         <philosophy:Main_method rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Analysis"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Georg_Wilhelm_Friedrich_Hegel"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Immanuel_Kant"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Georg_Wilhelm_Friedrich_Hegel"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Immanuel_Kant"/>
         <philosophy:Date_of_appearance>18th century</philosophy:Date_of_appearance>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Immanuel_Kant -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Immanuel_Kant">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
-        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Germany"/>
-        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Modern"/>
     </owl:NamedIndividual>
     
 
@@ -551,8 +444,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Irrationalism">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Epistemology"/>
         <philosophy:Main_method rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Irrationalism"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Arthur_Schopenhauer"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Friedrich_Nietzsche"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Arthur_Schopenhauer"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Friedrich_Nietzsche"/>
         <philosophy:Date_of_appearance>19th century</philosophy:Date_of_appearance>
     </owl:NamedIndividual>
     
@@ -566,52 +459,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Jean_Paul_Satre -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Jean_Paul_Satre">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
-        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#France"/>
-        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Contemprorary"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Jeremy_Bentham -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Jeremy_Bentham">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
-        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#The_UK"/>
-        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Modern"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#John_Locke -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#John_Locke">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
-        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#The_UK"/>
-        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Modern"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Libertarianism -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Libertarianism">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Free_will"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#John_Locke"/>
-        <philosophy:Century_of_beginning>17th century</philosophy:Century_of_beginning>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Marcus_Aurelius -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Marcus_Aurelius">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
-        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Greece"/>
-        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Ancient"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#John_Locke"/>
+        <philosophy:Century_of_beginning rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17</philosophy:Century_of_beginning>
     </owl:NamedIndividual>
     
 
@@ -650,22 +503,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Plato -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Plato">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
-        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Greece"/>
-        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Ancient"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Process -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Process">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Ontology"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Heraclitus"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Rene_Descartes"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Heraclitus"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Rene_Descartes"/>
         <philosophy:Date_of_appearance>500 BC</philosophy:Date_of_appearance>
     </owl:NamedIndividual>
     
@@ -676,19 +519,9 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Rationalism">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Epistemology"/>
         <philosophy:Main_method rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Evidence"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Baruch_Spinoza"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Rene_Descartes"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Baruch_Spinoza"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Rene_Descartes"/>
         <philosophy:Date_of_appearance>17th century</philosophy:Date_of_appearance>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Rene_Descartes -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Rene_Descartes">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
-        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#The_UK"/>
-        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Modern"/>
     </owl:NamedIndividual>
     
 
@@ -698,19 +531,9 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Skepticism">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Epistemology"/>
         <philosophy:Main_method rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Evidence"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#David_Hume"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Democritus"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#David_Hume"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Democritus"/>
         <philosophy:Date_of_appearance>600 BC</philosophy:Date_of_appearance>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Socrates -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Socrates">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
-        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Greece"/>
-        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Ancient"/>
     </owl:NamedIndividual>
     
 
@@ -720,18 +543,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Solipsism">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Epistemology"/>
         <philosophy:Main_method rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Analysis"/>
-        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Rene_Descartes"/>
+        <philosophy:Main_philosophers rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Rene_Descartes"/>
         <philosophy:Date_of_appearance>17th century</philosophy:Date_of_appearance>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Soren_Kierkegaard -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Soren_Kierkegaard">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
-        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Denmark"/>
-        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Modern"/>
     </owl:NamedIndividual>
     
 
@@ -744,9 +557,199 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Thomas_Aquinas -->
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Albert_Camus -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Thomas_Aquinas">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Albert_Camus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
+        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#France"/>
+        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Contemprorary"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Aristotle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Aristotle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
+        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Greece"/>
+        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Ancient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Arthur_Schopenhauer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Arthur_Schopenhauer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
+        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Germany"/>
+        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Modern"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Baruch_Spinoza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Baruch_Spinoza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
+        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Netherlands"/>
+        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Modern"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Bertrand_Russell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Bertrand_Russell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
+        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#The_UK"/>
+        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Contemprorary"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#David_Hume -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#David_Hume">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
+        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#The_UK"/>
+        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Modern"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Democritus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Democritus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
+        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Greece"/>
+        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Ancient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Friedrich_Nietzsche -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Friedrich_Nietzsche">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
+        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Germany"/>
+        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Modern"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Georg_Wilhelm_Friedrich_Hegel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Georg_Wilhelm_Friedrich_Hegel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
+        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Germany"/>
+        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Modern"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Heraclitus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Heraclitus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
+        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Greece"/>
+        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Ancient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Immanuel_Kant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Immanuel_Kant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
+        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Germany"/>
+        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Modern"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Jean_Paul_Satre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Jean_Paul_Satre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
+        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#France"/>
+        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Contemprorary"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Jeremy_Bentham -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Jeremy_Bentham">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
+        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#The_UK"/>
+        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Modern"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#John_Locke -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#John_Locke">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
+        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#The_UK"/>
+        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Modern"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Marcus_Aurelius -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Marcus_Aurelius">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
+        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Greece"/>
+        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Ancient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Plato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Plato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
+        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Greece"/>
+        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Ancient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Rene_Descartes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Rene_Descartes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
+        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#The_UK"/>
+        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Modern"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Socrates -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Socrates">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
+        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Greece"/>
+        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Ancient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Soren_Kierkegaard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Soren_Kierkegaard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
+        <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Denmark"/>
+        <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Modern"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Thomas_Aquinas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Thomas_Aquinas">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Philosopher"/>
         <philosophy:Country_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Italy"/>
         <philosophy:Era_of_philosopher rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#Medieval"/>

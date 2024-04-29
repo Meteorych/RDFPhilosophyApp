@@ -1,0 +1,311 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2/"
+     xml:base="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:philosophy="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#"
+     xmlns:philosophy-2="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Height -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Height">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Weight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Weight">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Year_of_birth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Year_of_birth">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosophy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosophy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosophy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Albert_Camus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Albert_Camus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">175</philosophy-2:Height>
+        <philosophy-2:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70</philosophy-2:Weight>
+        <philosophy-2:Year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1913</philosophy-2:Year_of_birth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Aristotle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Aristotle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">165</philosophy-2:Height>
+        <philosophy-2:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80</philosophy-2:Weight>
+        <philosophy-2:Year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-480</philosophy-2:Year_of_birth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Arthur_Schopenhauer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Arthur_Schopenhauer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">163</philosophy-2:Height>
+        <philosophy-2:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">65</philosophy-2:Weight>
+        <philosophy-2:Year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1788</philosophy-2:Year_of_birth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Baruch_Spinoza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Baruch_Spinoza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">169</philosophy-2:Height>
+        <philosophy-2:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">75</philosophy-2:Weight>
+        <philosophy-2:Year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1632</philosophy-2:Year_of_birth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Bertrand_Russell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Bertrand_Russell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">184</philosophy-2:Height>
+        <philosophy-2:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">81</philosophy-2:Weight>
+        <philosophy-2:Year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1872</philosophy-2:Year_of_birth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#David_Hume -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#David_Hume">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">156</philosophy-2:Height>
+        <philosophy-2:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80</philosophy-2:Weight>
+        <philosophy-2:Year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1711</philosophy-2:Year_of_birth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Democritus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Democritus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">151</philosophy-2:Height>
+        <philosophy-2:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90</philosophy-2:Weight>
+        <philosophy-2:Year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-400</philosophy-2:Year_of_birth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Friedrich_Nietzsche -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Friedrich_Nietzsche">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">170</philosophy-2:Height>
+        <philosophy-2:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70</philosophy-2:Weight>
+        <philosophy-2:Year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1844</philosophy-2:Year_of_birth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Georg_Wilhelm_Friedrich_Hegel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Georg_Wilhelm_Friedrich_Hegel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">167</philosophy-2:Height>
+        <philosophy-2:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">65</philosophy-2:Weight>
+        <philosophy-2:Year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1770</philosophy-2:Year_of_birth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Heraclitus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Heraclitus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">155</philosophy-2:Height>
+        <philosophy-2:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</philosophy-2:Weight>
+        <philosophy-2:Year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-550</philosophy-2:Year_of_birth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Immanuel_Kant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Immanuel_Kant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">177</philosophy-2:Height>
+        <philosophy-2:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">75</philosophy-2:Weight>
+        <philosophy-2:Year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1724</philosophy-2:Year_of_birth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Jean_Paul_Satre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Jean_Paul_Satre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">160</philosophy-2:Height>
+        <philosophy-2:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">75</philosophy-2:Weight>
+        <philosophy-2:Year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1905</philosophy-2:Year_of_birth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Jeremy_Bentham -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Jeremy_Bentham">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">189</philosophy-2:Height>
+        <philosophy-2:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">95</philosophy-2:Weight>
+        <philosophy-2:Year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1748</philosophy-2:Year_of_birth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#John_Locke -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#John_Locke">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">165</philosophy-2:Height>
+        <philosophy-2:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">69</philosophy-2:Weight>
+        <philosophy-2:Year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1632</philosophy-2:Year_of_birth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Marcus_Aurelius -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Marcus_Aurelius">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">191</philosophy-2:Height>
+        <philosophy-2:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">99</philosophy-2:Height>
+        <philosophy-2:Year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">121</philosophy-2:Year_of_birth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Plato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Plato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">140</philosophy-2:Height>
+        <philosophy-2:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">95</philosophy-2:Weight>
+        <philosophy-2:Year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-424</philosophy-2:Year_of_birth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Rene_Descartes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Rene_Descartes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">159</philosophy-2:Height>
+        <philosophy-2:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">230</philosophy-2:Weight>
+        <philosophy-2:Year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1596</philosophy-2:Year_of_birth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Socrates -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Socrates">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">180</philosophy-2:Height>
+        <philosophy-2:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">115</philosophy-2:Weight>
+        <philosophy-2:Year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-350</philosophy-2:Year_of_birth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Soren_Kierkegaard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Soren_Kierkegaard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">185</philosophy-2:Height>
+        <philosophy-2:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">69</philosophy-2:Weight>
+        <philosophy-2:Year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1813</philosophy-2:Year_of_birth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Thomas_Aquinas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Thomas_Aquinas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">152</philosophy-2:Height>
+        <philosophy-2:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">55</philosophy-2:Weight>
+        <philosophy-2:Year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1225</philosophy-2:Year_of_birth>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

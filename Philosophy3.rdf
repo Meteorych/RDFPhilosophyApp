@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-3/"
+     xml:base="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-3/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:philosophy="http://www.semanticweb.org/user/ontologies/2024/3/philosophy#"
+     xmlns:philosophy-2="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-3"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Year_of_death -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Year_of_death">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosophy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosophy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosophy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Albert_Camus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Albert_Camus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Year_of_death rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1960</philosophy-2:Year_of_death>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Aristotle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Aristotle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Year_of_death rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-420</philosophy-2:Year_of_death>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Arthur_Schopenhauer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Arthur_Schopenhauer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Year_of_death rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1861</philosophy-2:Year_of_death>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Baruch_Spinoza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Baruch_Spinoza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Year_of_death rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1677</philosophy-2:Year_of_death>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Bertrand_Russell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Bertrand_Russell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Year_of_death rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1970</philosophy-2:Year_of_death>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#David_Hume -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#David_Hume">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Year_of_death rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1776</philosophy-2:Year_of_death>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Democritus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Democritus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Year_of_death rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-370</philosophy-2:Year_of_death>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Friedrich_Nietzsche -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Friedrich_Nietzsche">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Year_of_death rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1900</philosophy-2:Year_of_death>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Georg_Wilhelm_Friedrich_Hegel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Georg_Wilhelm_Friedrich_Hegel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Year_of_death rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1831</philosophy-2:Year_of_death>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Heraclitus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Heraclitus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Immanuel_Kant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Immanuel_Kant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Year_of_death rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1804</philosophy-2:Year_of_death>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Jean_Paul_Satre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Jean_Paul_Satre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Year_of_death rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1980</philosophy-2:Year_of_death>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Jeremy_Bentham -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Jeremy_Bentham">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Year_of_death rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1832</philosophy-2:Year_of_death>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#John_Locke -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#John_Locke">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Year_of_death rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1704</philosophy-2:Year_of_death>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Marcus_Aurelius -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Marcus_Aurelius">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Year_of_death rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">180</philosophy-2:Year_of_death>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Plato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Plato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Year_of_death rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-348</philosophy-2:Year_of_death>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Rene_Descartes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Rene_Descartes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Year_of_death rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1650</philosophy-2:Year_of_death>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Socrates -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Socrates">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Year_of_death rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-399</philosophy-2:Year_of_death>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Soren_Kierkegaard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Soren_Kierkegaard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Year_of_death rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1855</philosophy-2:Year_of_death>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Thomas_Aquinas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Thomas_Aquinas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#Philosopher"/>
+        <philosophy-2:Year_of_death rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1274</philosophy-2:Year_of_death>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
