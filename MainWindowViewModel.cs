@@ -1,4 +1,5 @@
 ﻿using Neo4j.Driver;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
@@ -8,12 +9,22 @@ namespace RDFPhilosophyApp
     {
         private IDriver _driver;
 
-        public List<Triple> TriplesList { get; private set; }
+        private ObservableCollection<Triple> _triplesList;
         
         public MainWindowViewModel(string uri)
         {
             _driver = GraphDatabase.Driver(uri, AuthTokens.Basic("neo4j", "vanyavanya"));
             GetData();
+        }
+
+        public ObservableCollection<Triple> TriplesList
+        {
+            get { return _triplesList; }
+            set
+            {
+                _triplesList = value;
+                OnPropertyChanged(nameof(TriplesList));
+            }
         }
 
         public void GetData()
@@ -25,7 +36,7 @@ namespace RDFPhilosophyApp
                     var result = tx.Run(
                         "MATCH (s)-[p]->(o)" +
                         "RETURN s.uri AS subject, type(p) AS predicate, o.uri AS object");
-                    var triples = new List<Triple>();
+                    var triples = new ObservableCollection<Triple>();
                     foreach (var record in result)
                     {
                         triples.Add(new Triple
@@ -49,7 +60,7 @@ namespace RDFPhilosophyApp
                     var result = tx.Run(
                         "MATCH (s:ns0__Philosopher)" +
                         "RETURN s.uri AS subject");
-                    var triples = new List<Triple>();
+                    var triples = new ObservableCollection<Triple>();
                     foreach (var record in result)
                     {
                         triples.Add(new Triple
