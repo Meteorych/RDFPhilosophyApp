@@ -42,7 +42,7 @@ namespace RDFPhilosophyApp
                         triples.Add(new Triple
                         {
                             Subject = record["subject"].As<string>().Split("#").Last(),
-                            Predicate = record["predicate"].As<string>()[(record["predicate"].As<string>().IndexOf("_")+2)..],
+                            Predicate = record["predicate"].As<string>()[(record["predicate"].As<string>().IndexOf("_") + 2)..],
                             Object = record["object"].As<string>().Split("#").Last()
                         });
                     }

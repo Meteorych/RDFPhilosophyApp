@@ -29,16 +29,16 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-            <Button Grid.Row="2" Grid.Column ="0" Name="GetPhilosophersByBranch" FontSize="18">
+            <Button Grid.Row="2" Grid.Column ="0" Name="GetPhilosophersByBranch" FontSize="18" Click="GetPhilosophersByBranch_Click">
                 <TextBlock TextWrapping="Wrap" Text="Get philosophers by branch"/>
             </Button>
-            <Button Grid.Row="2" Grid.Column ="1" Name="GetMethodsByBranch" FontSize="18">
+            <Button Grid.Row="2" Grid.Column ="1" Name="GetMethodsByBranch" FontSize="18" Click="GetMethodsByBranch_Click">
                 <TextBlock TextWrapping="Wrap" Text="Get method by branch"/>
             </Button>
-            <Button Grid.Row="3" Grid.Column ="0" Name="InsertNewPhilosopherButton" FontSize="18">
+            <Button Grid.Row="3" Grid.Column ="0" Name="InsertNewPhilosopherButton" FontSize="18" Click="InsertNewPhilosopherButton_Click">
                 <TextBlock TextWrapping="Wrap" Text="Insert new Philosopher"/>
             </Button>
-            <Button Grid.Row ="3" Grid.Column="1" FontSize="18">
+            <Button Grid.Row ="3" Grid.Column="1" Name ="ChangeBirthYearButton" FontSize="18" Click="ChangeBirthYearButton_Click">
                 <TextBlock TextWrapping="Wrap" Text="Change philosopher's Year of Birth" FontSize="18"/>
             </Button>
             <Button Grid.Row ="4" Grid.Column ="0" Name ="ShowDataButton"  FontSize="18" Click="ShowDataButton_Click">
@@ -48,33 +48,49 @@
                 <TextBlock>Show philosophers from ontology</TextBlock>
             </Button>
         </Grid>
-        <StackPanel Visibility="Collapsed">
-            <Grid Name="InputBoxGetPhilosopherByBranch" Visibility="Collapsed">
-                <Grid Background="Black" Opacity="0.5"/>
-                <Border
-                MinWidth="250"
-                Background="Orange" 
-                BorderBrush="Black" 
-                BorderThickness="1" 
-                CornerRadius="0,55,0,55" 
-                HorizontalAlignment="Center" 
-                VerticalAlignment="Center">
-                    <StackPanel>
-                        <TextBlock Margin="5" Text="Input Box:" FontWeight="Bold" FontFamily="Cambria" />
-                        <TextBox MinWidth="150" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="InputTextBox"/>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                            <!--<Button x:Name="YesButton" Margin="5" Content="Yes" Background="{x:Null}" Click="YesButton_Click"/>
-                            <Button x:Name="NoButton" Margin="5" Content="No" Background="{x:Null}" Click="NoButton_Click" />-->
-                        </StackPanel>
+        <Grid Name="InputBoxGetPhilosopherByBranch" Visibility="Collapsed">
+            <Grid Background="Black" Opacity="0.5"/>
+            <Border
+            MinWidth="250"
+            Background="Orange" 
+            BorderBrush="Black" 
+            BorderThickness="1" 
+            CornerRadius="0,55,0,55" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center">
+                <StackPanel>
+                    <TextBlock Margin="5" Text="Input Box:" FontWeight="Bold" FontFamily="Cambria" />
+                    <TextBox MinWidth="150" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="InputBranchPhilosophersTextBox"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Margin="5" Content="Yes" Background="{x:Null}" Click="GetPhilosopherYesButton_Click"/>
+                        <Button Margin="5" Content="No" Background="{x:Null}" Click="NoButton_Click" />
                     </StackPanel>
-                </Border>
-            </Grid>
-            <Grid Name="InputBoxGetMethodsByBranch" Visibility="Collapsed">
-                
-            </Grid>
-            <Grid Name="InputBoxPhilosopherData" Visibility="Collapsed"/>
-            <Grid Name ="InputBoxChangePhilosophersYearOfBirth" Visibility="Collapsed"/>
-        </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
+        <Grid Name="InputBoxGetMethodsByBranch" Visibility="Collapsed">
+            <Grid Background="Black" Opacity="0.5"/>
+            <Border
+            MinWidth="250"
+            Background="Orange" 
+            BorderBrush="Black" 
+            BorderThickness="1" 
+            CornerRadius="0,55,0,55" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center">     
+                <StackPanel>
+                    <TextBlock Margin="5" Text="Input Box:" FontWeight="Bold" FontFamily="Cambria" />
+                    <TextBox MinWidth="150" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="InputBranchMethodsTextBox"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Margin="5" Content="Yes" Background="{x:Null}" Click="GetPhilosopherYesButton_Click"/>
+                        <Button Margin="5" Content="No" Background="{x:Null}" Click="NoButton_Click" />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
+        <Grid Name="InputBoxPhilosopherData" Visibility="Collapsed"/>
+        <Grid Name ="InputBoxChangePhilosophersYearOfBirth" Visibility="Collapsed"/>
+        
         
     </Grid>
 </Window>

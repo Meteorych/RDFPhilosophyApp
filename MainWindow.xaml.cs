@@ -24,7 +24,41 @@ namespace RDFPhilosophyApp
         private void ShowPhilosophersButton_Click(object sender, RoutedEventArgs e)
         {
             _viewModel.GetPhilosophersOnlyData();
-            DataView.UpdateLayout();
+        }
+
+        private void GetPhilosophersByBranch_Click(object sender, RoutedEventArgs e)
+        {
+            
+            InputBoxGetPhilosopherByBranch.Visibility = Visibility.Visible;
+        }
+
+        private void GetPhilosopherYesButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NoButton_Click(Object sender, RoutedEventArgs e)
+        {
+            var parentGrid = (sender as FrameworkElement)?.Parent as Grid;
+            if ( parentGrid is not null)
+            {
+                parentGrid.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void GetMethodsByBranch_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ChangeBirthYearButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void InsertNewPhilosopherButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
