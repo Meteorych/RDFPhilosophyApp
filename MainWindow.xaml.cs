@@ -51,9 +51,15 @@ namespace RDFPhilosophyApp
             }
         }
 
+        /// <summary>
+        /// Techical static method to find type T among parents.
+        /// </summary>
+        /// <typeparam name="T">Type of parent to find.</typeparam>
+        /// <param name="child">Element which parents will be investigated.</param>
+        /// <returns></returns>
         private static T? FindParent<T>(DependencyObject child) where T : DependencyObject
         {
-            DependencyObject parent = VisualTreeHelper.GetParent(child);
+            var parent = VisualTreeHelper.GetParent(child);
 
             while (parent != null && !(parent is T))
             {
@@ -65,7 +71,13 @@ namespace RDFPhilosophyApp
 
         private void GetMethodsByBranch_Click(object sender, RoutedEventArgs e)
         {
+            InputBoxGetMethodsByBranch.Visibility = Visibility.Visible;
+        }
 
+        private void GetMethodsByBranchYesButton_Click(object sender, RoutedEventArgs e)
+        {
+            _viewModel.GetData(URI + InputBranchMethodsTextBox.Text, label2: ":ns0__Main_method");
+            NoButton_Click(sender, e);
         }
 
         private void ChangeBirthYearButton_Click(object sender, RoutedEventArgs e)

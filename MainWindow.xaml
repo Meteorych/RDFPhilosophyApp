@@ -82,7 +82,7 @@
                     <TextBlock Margin="5" Text="Input Box:" FontWeight="Bold" FontFamily="Cambria" />
                     <TextBox MinWidth="150" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="InputBranchMethodsTextBox"/>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Margin="5" Content="Yes" Background="{x:Null}" Click="GetPhilosopherYesButton_Click"/>
+                        <Button Margin="5" Content="Yes" Background="{x:Null}" Click="GetMethodsByBranchYesButton_Click"/>
                         <Button Margin="5" Content="No" Background="{x:Null}" Click="NoButton_Click" />
                     </StackPanel>
                 </StackPanel>
