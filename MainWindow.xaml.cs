@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace RDFPhilosophyApp
 {
@@ -8,6 +9,8 @@ namespace RDFPhilosophyApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private const string URI = @"http://www.semanticweb.org/user/ontologies/2024/3/philosophy#";
+
         private readonly MainWindowViewModel _viewModel;
         public MainWindow()
         {
@@ -34,16 +37,30 @@ namespace RDFPhilosophyApp
 
         private void GetPhilosopherYesButton_Click(object sender, RoutedEventArgs e)
         {
-
+            _viewModel.GetData(URI + InputBranchPhilosophersTextBox.Text, label2: ":ns0__Main_philosophers");
+            NoButton_Click(sender, e);
         }
 
         private void NoButton_Click(Object sender, RoutedEventArgs e)
         {
-            var parentGrid = (sender as FrameworkElement)?.Parent as Grid;
-            if ( parentGrid is not null)
+            var button = (Button)sender;
+            var parentGrid = FindParent<Grid>(button);
+            if (parentGrid is not null)
             {
                 parentGrid.Visibility = Visibility.Collapsed;
             }
+        }
+
+        private static T? FindParent<T>(DependencyObject child) where T : DependencyObject
+        {
+            DependencyObject parent = VisualTreeHelper.GetParent(child);
+
+            while (parent != null && !(parent is T))
+            {
+                parent = VisualTreeHelper.GetParent(parent);
+            }
+
+            return parent as T;
         }
 
         private void GetMethodsByBranch_Click(object sender, RoutedEventArgs e)

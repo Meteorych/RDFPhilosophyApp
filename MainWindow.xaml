@@ -59,7 +59,7 @@
             HorizontalAlignment="Center" 
             VerticalAlignment="Center">
                 <StackPanel>
-                    <TextBlock Margin="5" Text="Input Box:" FontWeight="Bold" FontFamily="Cambria" />
+                    <TextBlock Margin="5" Text="Branch:" FontWeight="Bold" FontFamily="Cambria" />
                     <TextBox MinWidth="150" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="InputBranchPhilosophersTextBox"/>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <Button Margin="5" Content="Yes" Background="{x:Null}" Click="GetPhilosopherYesButton_Click"/>
