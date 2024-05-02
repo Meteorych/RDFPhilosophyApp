@@ -1,4 +1,5 @@
 ﻿using Neo4j.Driver;
+using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -83,6 +84,27 @@ namespace RDFPhilosophyApp
                 });
             TriplesList = data;
         }
+
+        /// <summary>
+        /// In connected database you can change year of birth, height or weight of philosopher (currently works only with year of birth).
+        /// </summary>
+        /// <param name="newData"></param>
+        public void ChangeData(string philosopherName, double newData)
+        {
+            using var session = _driver.Session();
+            var data = session.ExecuteWrite(
+                tx =>
+                {
+                    var result = tx.Run(
+                        "MATCH (s:ns1__Philosopher)" +
+                        $"WHERE s.uri = \"{philosopherName}\"\n" + 
+                        $"SET s.ns1__Year_of_birth = {newData}");
+                    result.Consume();
+                    return 1;
+                });
+        }
+
+
         public void GetPhilosophersOnlyData()
         {
             using var session = _driver.Session();
@@ -91,16 +113,16 @@ namespace RDFPhilosophyApp
                 {
                     var result = tx.Run(
                         "MATCH (s:ns0__Philosopher)" +
-                        "RETURN s.uri AS subject");
+                        "RETURN s.uri AS subject, s.ns1__Year_of_birth as year_of_birth");
                     var triples = new ObservableCollection<Triple>();
                     foreach (var record in result)
                     {
                         triples.Add(new Triple
                         {
                             Subject = record["subject"].As<string>().Split("#").Last(),
-                            Predicate = "null",
-                            Object = "null"
-                        });
+                            Predicate = "Year_of_birth",
+                            Object = record["year_of_birth"].As<int>().ToString()
+                        }); ;
                     }
                     return triples;
                 });
