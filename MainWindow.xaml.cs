@@ -95,6 +95,11 @@ namespace RDFPhilosophyApp
             InputBoxPhilosopherData.Visibility = Visibility.Visible;
         }
 
+        private void CreatePhilosopherYesButton_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         private void ChangeBirthYearButton_Click(object sender, RoutedEventArgs e)
         {
             InputBoxChangePhilosophersYearOfBirth.Visibility = Visibility.Visible;

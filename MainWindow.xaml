@@ -88,7 +88,29 @@
                 </StackPanel>
             </Border>
         </Grid>
-        <Grid Name="InputBoxPhilosopherData" Visibility="Collapsed"/>
+        <Grid Name="InputBoxPhilosopherData" Visibility="Collapsed">
+            <Grid Background="Black" Opacity="0.5"/>
+            <Border
+            MinWidth="250"
+            Background="Orange" 
+            BorderBrush="Black" 
+            BorderThickness="1" 
+            CornerRadius="0,55,0,55" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center">
+                <StackPanel>
+                    <TextBlock Margin="5" Text="Input name of philosopher:" FontWeight="Bold" FontFamily="Cambria" />
+                    <TextBox MinWidth="150" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="InputPhilosophersNameTextBox"/>
+                    <TextBlock Margin="5" Text="Input year of birth:" FontWeight="Bold" FontFamily="Cambria" />
+                    <TextBox MinWidth="150" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="InputPhilosophersBirthTextBox"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Margin="5" Content="Yes" Background="{x:Null}" Click="CreatePhilosopherYesButton_Click"/>
+                        <Button Margin="5" Content="No" Background="{x:Null}" Click="NoButton_Click" />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+        </Grid>
         <Grid Name ="InputBoxChangePhilosophersYearOfBirth" Visibility="Collapsed">
             <Grid Background="Black" Opacity="0.5"/>
             <Border
@@ -112,7 +134,5 @@
             </Border>
 
         </Grid>
-        
-        
     </Grid>
 </Window>
