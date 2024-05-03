@@ -104,7 +104,9 @@ namespace RDFPhilosophyApp
                 });
         }
 
-
+        /// <summary>
+        /// Method to get only philosophers with their year of birth
+        /// </summary>
         public void GetPhilosophersOnlyData()
         {
             using var session = _driver.Session();
@@ -122,11 +124,32 @@ namespace RDFPhilosophyApp
                             Subject = record["subject"].As<string>().Split("#").Last(),
                             Predicate = "Year_of_birth",
                             Object = record["year_of_birth"].As<int>().ToString()
-                        }); ;
+                        });
                     }
                     return triples;
                 });
             TriplesList = data;
+        }
+
+        /// <summary>
+        /// Create new philosopher.
+        /// </summary>
+        /// <param name="philosopherUri">URI of philosopher.</param>
+        /// <param name="yearOfBirth">Philosopher's year of birth.</param>
+        public void CreateNewPhilosopher(string philosopherUri, double yearOfBirth)
+        {
+            using var session = _driver.Session();
+            var data = session.ExecuteWrite(
+                tx =>
+                {
+                    var result = tx.Run(
+                        "CREATE (n:Resource:ns0__Philosopher:ns1__Philosopher:owl__NamedIndividual " +
+                        $"{{\r\n  ns1__Year_of_birth: {yearOfBirth},\r\n" +
+                        $"uri: '{philosopherUri}'}})");
+                    result.Consume();
+                    return 1;
+                });
+            GetPhilosophersOnlyData();
         }
 
         public void Dispose()

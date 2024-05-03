@@ -41,8 +41,8 @@
             <Button Grid.Row ="3" Grid.Column="1" Name ="ChangeBirthYearButton" FontSize="18" Click="ChangeBirthYearButton_Click">
                 <TextBlock TextWrapping="Wrap" Text="Change philosopher's Year of Birth" FontSize="18"/>
             </Button>
-            <Button Grid.Row ="4" Grid.Column ="0" Name ="ShowDataButton"  FontSize="18" Click="ShowDataButton_Click">
-                <TextBlock>Show all data from ontology</TextBlock>
+            <Button Grid.Row ="4" Grid.Column ="0" Name ="ShowTriplesButton"  FontSize="18" Click="ShowDataButton_Click">
+                <TextBlock>Show all triples from ontology</TextBlock>
             </Button>
             <Button Grid.Row ="4" Grid.Column ="1" Name ="ShowPhilosophersButton" FontSize="18" Click="ShowPhilosophersButton_Click">
                 <TextBlock>Show philosophers from ontology</TextBlock>

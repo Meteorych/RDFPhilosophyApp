@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using static System.Net.WebRequestMethods;
 
 namespace RDFPhilosophyApp
 {
@@ -97,7 +98,18 @@ namespace RDFPhilosophyApp
 
         private void CreatePhilosopherYesButton_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            var philosopherName = "http://www.semanticweb.org/user/ontologies/2024/3/philosophy-2#" + InputPhilosophersNameTextBox.Text.Trim().Replace(" ", "_");
+            double philosopherAge;
+            try
+            {
+                philosopherAge = double.Parse(InputPhilosophersBirthTextBox.Text);
+            } catch(Exception) 
+            {
+                MessageBox.Show("Provide relevent year", "Error");
+                return;
+            }
+            _viewModel.CreateNewPhilosopher(philosopherName, philosopherAge);
+            NoButton_Click(sender, e);
         }
 
         private void ChangeBirthYearButton_Click(object sender, RoutedEventArgs e)
