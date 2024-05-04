@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:RDFPhilosophyApp" 
         d:DataContext="{d:DesignInstance Type=local:MainWindowViewModel}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="1000" ResizeMode="NoResize">
+        Title="MainWindow" Height="450" Width="1000">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
