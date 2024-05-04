@@ -22,6 +22,7 @@ namespace RDFPhilosophyApp
         {
             _viewModel = new MainWindowViewModel("bolt://localhost:7687");
             DataContext = _viewModel;
+            WindowState = WindowState.Maximized;
             InitializeComponent();
         }
 
