@@ -119,13 +119,36 @@ namespace RDFPhilosophyApp
 
         private void ChangeBirthYearButtonYesButton_Click(object sender, RoutedEventArgs e)
         {
-            if (InputNewYearOfBirthTextBox is not null)
+            if (!string.IsNullOrEmpty(InputNewYearOfBirthTextBox.Text) || !string.IsNullOrEmpty(InputPhilosopherTextBox.Text))
             {
                 _viewModel.ChangeData(URI2 + InputPhilosopherTextBox.Text, Convert.ToDouble(InputNewYearOfBirthTextBox.Text));
+                NoButton_Click(sender, e);
+                _viewModel.GetPhilosophersOnlyData();
+                MessageBox.Show("Data is succesfully changed", "Success!");
             }
-            NoButton_Click(sender, e);
-            _viewModel.GetPhilosophersOnlyData();
-            MessageBox.Show("Data is succesfully changed", "Success!");
+            else
+            {
+                MessageBox.Show("Enter appropriate information", "Error");
+            }
+        }
+
+        private void DeletePhilosopherButton_Click(object sender, RoutedEventArgs e)
+        {
+            InputBoxDeletePhilosopher.Visibility = Visibility.Visible;
+        }
+
+        private void DeletePhilosopherYesButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(InputNewYearOfBirthTextBox.Text))
+            {
+                var philosopherUri = (URI2 + InputPhilosopherToDeleteTextBox.Text.Replace(" ", "_"));
+                _viewModel.DeletePhilosopher(philosopherUri);
+                NoButton_Click(sender, e);
+                _viewModel.GetPhilosophersOnlyData();
+            }
+            {
+                MessageBox.Show("Enter appropriate name of philosopher!", "Error");
+            }
         }
     }
 }

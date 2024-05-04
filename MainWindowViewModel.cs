@@ -152,6 +152,21 @@ namespace RDFPhilosophyApp
             GetPhilosophersOnlyData();
         }
 
+
+        public void DeletePhilosopher(string philosopherUri)
+        {
+            using var session = _driver.Session();
+            var data = session.ExecuteWrite(
+                tx =>
+                {
+                    var result = tx.Run(
+                        "MATCH (s:ns0__Philosopher)" +
+                        $"WHETE s.uri = {philosopherUri}" +
+                        "DETACH DELETE s");
+                    result.Consume();
+                    return 1;
+                });
+        }
         public void Dispose()
         {
             _driver.Dispose();
