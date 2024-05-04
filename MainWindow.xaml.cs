@@ -35,26 +35,44 @@ namespace RDFPhilosophyApp
             _viewModel.GetPhilosophersOnlyData();
         }
 
+        
         private void GetPhilosophersByBranch_Click(object sender, RoutedEventArgs e)
         {
             
             InputBoxGetPhilosopherByBranch.Visibility = Visibility.Visible;
         }
 
+        private void GetMethodsByBranch_Click(object sender, RoutedEventArgs e)
+        {
+            InputBoxGetMethodsByBranch.Visibility = Visibility.Visible;
+        }
+
+        private void InsertNewPhilosopherButton_Click(object sender, RoutedEventArgs e)
+        {
+            InputBoxPhilosopherData.Visibility = Visibility.Visible;
+        }
+
+        private void ChangeBirthYearButton_Click(object sender, RoutedEventArgs e)
+        {
+            InputBoxChangePhilosophersYearOfBirth.Visibility = Visibility.Visible;
+        }
+
+
+        private void DeletePhilosopherButton_Click(object sender, RoutedEventArgs e)
+        {
+            InputBoxDeletePhilosopher.Visibility = Visibility.Visible;
+        }
+
+        private void GetPhilosopherByYearAndBranch_Click(object sender, RoutedEventArgs e)
+        {
+            InputBoxGetPhilosopherByBranchAndYear.Visibility = Visibility.Visible;
+        }
+
+
         private void GetPhilosopherYesButton_Click(object sender, RoutedEventArgs e)
         {
             _viewModel.GetData(URI1 + InputBranchPhilosophersTextBox.Text, label2: ":ns0__Main_philosophers");
             NoButton_Click(sender, e);
-        }
-
-        private void NoButton_Click(Object sender, RoutedEventArgs e)
-        {
-            var button = (Button)sender;
-            var parentGrid = FindParent<Grid>(button);
-            if (parentGrid is not null)
-            {
-                parentGrid.Visibility = Visibility.Collapsed;
-            }
         }
 
         /// <summary>
@@ -75,10 +93,6 @@ namespace RDFPhilosophyApp
             return parent as T;
         }
 
-        private void GetMethodsByBranch_Click(object sender, RoutedEventArgs e)
-        {
-            InputBoxGetMethodsByBranch.Visibility = Visibility.Visible;
-        }
 
         /// <summary>
         /// Get methods of branch "Yes" button processing.
@@ -91,10 +105,6 @@ namespace RDFPhilosophyApp
             NoButton_Click(sender, e);
         }
 
-        private void InsertNewPhilosopherButton_Click(object sender, RoutedEventArgs e)
-        {
-            InputBoxPhilosopherData.Visibility = Visibility.Visible;
-        }
 
         private void CreatePhilosopherYesButton_Click(object sender, RoutedEventArgs e)
         {
@@ -112,10 +122,6 @@ namespace RDFPhilosophyApp
             NoButton_Click(sender, e);
         }
 
-        private void ChangeBirthYearButton_Click(object sender, RoutedEventArgs e)
-        {
-            InputBoxChangePhilosophersYearOfBirth.Visibility = Visibility.Visible;
-        }
 
         private void ChangeBirthYearButtonYesButton_Click(object sender, RoutedEventArgs e)
         {
@@ -132,11 +138,7 @@ namespace RDFPhilosophyApp
             }
         }
 
-        private void DeletePhilosopherButton_Click(object sender, RoutedEventArgs e)
-        {
-            InputBoxDeletePhilosopher.Visibility = Visibility.Visible;
-        }
-
+   
         private void DeletePhilosopherYesButton_Click(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrEmpty(InputPhilosopherToDeleteTextBox.Text))
@@ -150,11 +152,6 @@ namespace RDFPhilosophyApp
                 MessageBox.Show("Enter appropriate name of philosopher!", "Error");
             }
         }
-
-        private void GetPhilosopherByYearAndBranch_Click(object sender, RoutedEventArgs e)
-        {
-            InputBoxGetPhilosopherByBranchAndYear.Visibility = Visibility.Visible;
-        }
         
         private void GetPhilosopherByBranchAndYearYesButton_Click(object sender, RoutedEventArgs e)
         {
@@ -167,6 +164,21 @@ namespace RDFPhilosophyApp
             }
             _viewModel.GetDataUsingProperty(URI1 + InputBranchPhilosophersTextBox1.Text, InputYearPhilosophersTextBox.Text, label2: ":ns0__Main_philosophers");
             NoButton_Click(sender, e);
+        }
+
+        /// <summary>
+        /// Event handler to manage clicking on "No" button during the providing of data for query.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void NoButton_Click(Object sender, RoutedEventArgs e)
+        {
+            var button = (Button)sender;
+            var parentGrid = FindParent<Grid>(button);
+            if (parentGrid is not null)
+            {
+                parentGrid.Visibility = Visibility.Collapsed;
+            }
         }
     }
 }
