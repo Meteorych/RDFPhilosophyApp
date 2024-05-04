@@ -161,7 +161,7 @@ namespace RDFPhilosophyApp
                 {
                     var result = tx.Run(
                         "MATCH (s:ns0__Philosopher)" +
-                        $"WHETE s.uri = {philosopherUri}" +
+                        $"WHERE s.uri = \"{philosopherUri}\"\n" +
                         "DETACH DELETE s");
                     result.Consume();
                     return 1;

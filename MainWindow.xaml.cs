@@ -139,14 +139,14 @@ namespace RDFPhilosophyApp
 
         private void DeletePhilosopherYesButton_Click(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(InputNewYearOfBirthTextBox.Text))
+            if (!string.IsNullOrEmpty(InputPhilosopherToDeleteTextBox.Text))
             {
                 var philosopherUri = (URI2 + InputPhilosopherToDeleteTextBox.Text.Replace(" ", "_"));
                 _viewModel.DeletePhilosopher(philosopherUri);
                 NoButton_Click(sender, e);
                 _viewModel.GetPhilosophersOnlyData();
             }
-            {
+            else {
                 MessageBox.Show("Enter appropriate name of philosopher!", "Error");
             }
         }
