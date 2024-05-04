@@ -150,5 +150,23 @@ namespace RDFPhilosophyApp
                 MessageBox.Show("Enter appropriate name of philosopher!", "Error");
             }
         }
+
+        private void GetPhilosopherByYearAndBranch_Click(object sender, RoutedEventArgs e)
+        {
+            InputBoxGetPhilosopherByBranchAndYear.Visibility = Visibility.Visible;
+        }
+        
+        private void GetPhilosopherByBranchAndYearYesButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                int.Parse(InputYearPhilosophersTextBox.Text);
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
+            _viewModel.GetDataUsingProperty(URI1 + InputBranchPhilosophersTextBox1.Text, InputYearPhilosophersTextBox.Text, label2: ":ns0__Main_philosophers");
+            NoButton_Click(sender, e);
+        }
     }
 }

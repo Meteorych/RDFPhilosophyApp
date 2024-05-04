@@ -85,6 +85,32 @@ namespace RDFPhilosophyApp
             TriplesList = data;
         }
 
+        public void GetDataUsingProperty(string uri, string property, string label1 = "", string label2 = "", string label3 = "")
+        {
+            using var session = _driver.Session();
+            var data = session.ExecuteRead(
+                tx =>
+                {
+                    var result = tx.Run(
+                        $"MATCH (s{label1})-[p{label2}]->(o{label3})" +
+                        $"WHERE s.uri = \"{uri}\"\n" +
+                        $"AND o.ns1__Year_of_birth > {property}\n" +
+                        "RETURN s.uri AS subject, type(p) AS predicate, o.uri AS object");
+                    var triples = new ObservableCollection<Triple>();
+                    foreach (var record in result)
+                    {
+                        triples.Add(new Triple
+                        {
+                            Subject = record["subject"].As<string>().Split("#").Last(),
+                            Predicate = record["predicate"].As<string>()[(record["predicate"].As<string>().IndexOf("_") + 2)..],
+                            Object = record["object"].As<string>().Split("#").Last()
+                        });
+                    }
+                    return triples;
+                });
+            TriplesList = data;
+        }
+
         /// <summary>
         /// In connected database you can change year of birth, height or weight of philosopher (currently works only with year of birth).
         /// </summary>

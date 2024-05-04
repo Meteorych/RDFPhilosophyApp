@@ -48,8 +48,11 @@
             <Button Grid.Row ="4" Grid.Column ="1" Name ="ShowPhilosophersButton" FontSize="18" Click="ShowPhilosophersButton_Click">
                 <TextBlock>Show philosophers from ontology</TextBlock>
             </Button>
-            <Button Grid.Row="5" Grid.ColumnSpan="2" Name ="DeletePhilosopherButton" FontSize ="18" Click="DeletePhilosopherButton_Click">
+            <Button Grid.Row="5" Grid.Column="0" Name ="DeletePhilosopherButton" FontSize ="18" Click="DeletePhilosopherButton_Click">
                 <TextBlock>Delete philosopher</TextBlock>
+            </Button>
+            <Button Grid.Row="5" Grid.Column="1" Name ="GetPhilosopherByYearAndBranch" FontSize="18" Click="GetPhilosopherByYearAndBranch_Click">
+                <TextBlock>Get philosopher by year and branch</TextBlock>
             </Button>
         </Grid>
         <Grid Name="InputBoxGetPhilosopherByBranch" Visibility="Collapsed">
@@ -157,6 +160,28 @@
                 </StackPanel>
             </Border>
 
+        </Grid>
+        <Grid Name="InputBoxGetPhilosopherByBranchAndYear" Visibility="Collapsed">
+            <Grid Background="Black" Opacity="0.5"/>
+            <Border
+           MinWidth="250"
+           Background="Orange" 
+           BorderBrush="Black" 
+           BorderThickness="1" 
+           CornerRadius="0,55,0,55" 
+           HorizontalAlignment="Center" 
+           VerticalAlignment="Center">
+                <StackPanel>
+                    <TextBlock Margin="5" Text="Branch:" FontWeight="Bold" FontFamily="Cambria" />
+                    <TextBox MinWidth="150" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="InputBranchPhilosophersTextBox1"/>
+                    <TextBlock Margin="5" Text="Year:" FontWeight="Bold" FontFamily="Cambria" />
+                    <TextBox MinWidth="150" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="InputYearPhilosophersTextBox"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Margin="5" Content="Yes" Background="{x:Null}" Click="GetPhilosopherByBranchAndYearYesButton_Click"/>
+                        <Button Margin="5" Content="No" Background="{x:Null}" Click="NoButton_Click" />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
         </Grid>
     </Grid>
 </Window>
